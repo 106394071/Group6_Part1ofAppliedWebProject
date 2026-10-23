@@ -3,12 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>apply.html</title>
+
+    <!-- TODO: Update the company name after the team finalises it. -->
+    <title>Apply for a Job | Company Name</title>
+
+    <!-- External stylesheet shared by the group -->
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Embedded CSS example required by the assignment -->
+    <style>
+        .apply-intro {
+            max-width: 70ch;
+        }
+    </style>
 </head>
 
 <body>
-    
-</body>
+    <header>
+        <div class="branding">
+            <!-- TODO: Replace with the final company name. -->
+            <h1>Company Name</h1>
+            <p>Careers and Opportunities</p>
+        </div>
 
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html" aria-current="page">Apply</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="apply-main">
+        <section class="apply-section">
+            <h2>Job Application Form</h2>
+
+            <!-- Inline CSS example required by the assignment -->
+            <p class="apply-intro" style="margin-top: 0;">
+                Please complete the form below to apply for a job.
+                Make sure all required information is provided.
+            </p>
+
+            <form
+                class="apply-form"
+                action="https://mercury.swin.edu.au/it000000/formtest.php"
+                method="post"
+            >
+                <div class="apply-form-grid">
+
+                    <div class="apply-field">
+                        <label for="job-reference">Job reference number</label>
+                        <input
+                            type="text"
+                            id="job-reference"
+                            name="job_reference"
+                            pattern="[A-Za-z0-9]{5}"
+                            maxlength="5"
+                            title="Enter exactly 5 letters or numbers."
+                            required
+                        >
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="first-name">First name</label>
+                        <input
+                            type="text"
+                            id="first-name"
+                            name="first_name"
+                            pattern="[A-Za-z]{1,20}"
+                            maxlength="20"
+                            title="Enter 1 to 20 alphabetic characters."
+                            required
+                        >
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="last-name">Last name</label>
+                        <input
+                            type="text"
+                            id="last-name"
+                            name="last_name"
+                            pattern="[A-Za-z]{1,20}"
+                            maxlength="20"
+                            title="Enter 1 to 20 alphabetic characters."
+                            required
+                        >
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="date-of-birth">Date of birth (DD/MM/YYYY)</label>
+                        <input
+                            type="text"
+                            id="date-of-birth"
+                            name="date_of_birth"
+                            placeholder="DD/MM/YYYY"
+                            pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
+                            maxlength="10"
+                            title="Enter the date in DD/MM/YYYY format."
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <fieldset class="apply-fieldset">
+                    <legend>Gender</legend>
+
+                    <div class="apply-option-list">
+                        <label for="gender-male">
+                            <input
+                                type="radio"
+                                id="gender-male"
+                                name="gender"
+                                value="Male"
+                                required
+                            >
+                            Male
+                        </label>
+
+                        <label for="gender-female">
+                            <input
+                                type="radio"
+                                id="gender-female"
+                                name="gender"
+                                value="Female"
+                                required
+                            >
+                            Female
+                        </label>
+
+                        <label for="gender-other">
+                            <input
+                                type="radio"
+                                id="gender-other"
+                                name="gender"
+                                value="Other"
+                                required
+                            >
+                            Other
+                        </label>
+
+                        <label for="gender-prefer-not-to-say">
+                            <input
+                                type="radio"
+                                id="gender-prefer-not-to-say"
+                                name="gender"
+                                value="Prefer not to say"
+                                required
+                            >
+                            Prefer not to say
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="apply-form-grid">
+
+                    <div class="apply-field">
+                        <label for="street-address">Street address</label>
+                        <input
+                            type="text"
+                            id="street-address"
+                            name="street_address"
+                            maxlength="40"
+                            required
+                        >
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="suburb">Suburb/Town</label>
+                        <input
+                            type="text"
+                            id="suburb"
+                            name="suburb"
+                            maxlength="40"
+                            required
+                        >
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="state">State</label>
+                        <select id="state" name="state" required>
+                            <option value="">Select a state</option>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="NT">NT</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="ACT">ACT</option>
+                        </select>
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="postcode">Postcode</label>
+                        <input
+                            type="text"
+                            id="postcode"
+                            name="postcode"
+                            inputmode="numeric"
+                            pattern="[0-9]{4}"
+                            maxlength="4"
+                            title="Enter exactly 4 digits."
+                            required
+                        >
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="phone">Phone number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            inputmode="numeric"
+                            pattern="[0-9]{8,12}"
+                            minlength="8"
+                            maxlength="12"
+                            title="Enter 8 to 12 digits."
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <fieldset class="apply-fieldset">
+                    <legend>Skill list</legend>
+
+                    <!-- TODO: Replace these placeholders with the team's
+                         agreed skills after the position is confirmed. -->
+                    <div class="apply-option-list">
+                        <label for="skill-one">
+                            <input
+                                type="checkbox"
+                                id="skill-one"
+                                name="skills[]"
+                                value="Skill 1"
+                                required
+                            >
+                            Skill option 1
+                        </label>
+
+                        <label for="skill-two">
+                            <input
+                                type="checkbox"
+                                id="skill-two"
+                                name="skills[]"
+                                value="Skill 2"
+                                required
+                            >
+                            Skill option 2
+                        </label>
+
+                        <label for="skill-three">
+                            <input
+                                type="checkbox"
+                                id="skill-three"
+                                name="skills[]"
+                                value="Skill 3"
+                                required
+                            >
+                            Skill option 3
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="apply-field">
+                    <label for="other-skills">Other skills</label>
+                    <textarea
+                        id="other-skills"
+                        name="other_skills"
+                        rows="5"
+                        placeholder="Enter any additional skills here."
+                    ></textarea>
+                </div>
+
+                <div class="apply-actions">
+                    <button type="submit">Submit Application</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Company Name. All rights reserved.</p>
+    </footer>
+</body>
 </html>

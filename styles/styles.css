@@ -111,4 +111,76 @@ footer a {
 
 /* Apply Page CSS*/
 
+.apply-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+}
+
+.apply-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.apply-field input,
+.apply-field select,
+.apply-field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    font: inherit;
+}
+
+.apply-fieldset {
+    margin: 20px 0;
+    padding: 16px;
+    border: 1px solid #a8a8a8;
+    border-radius: 8px;
+}
+
+.apply-option-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+.apply-option-list label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.apply-option-list input {
+    width: auto;
+}
+
+.apply-field input:focus-visible,
+.apply-field select:focus-visible,
+.apply-field textarea:focus-visible,
+.apply-option-list input:focus-visible,
+.apply-actions button:focus-visible {
+    outline: 2px solid #2457a7;
+    outline-offset: 2px;
+}
+
+.apply-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.apply-actions button {
+    padding: 10px 18px;
+}
+
+@media (max-width: 600px) {
+    .apply-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
 /* About Page CSS*/
