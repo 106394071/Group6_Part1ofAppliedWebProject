@@ -108,7 +108,32 @@ footer a {
     }
 }
 /* Jobs Page CSS*/
+/* Reset căn bản để tính toán width chính xác */
+* {
+    box-sizing: border-box;
+}
 
+/* Cấu hình layout chính */
+main {
+    width: 100%;
+    overflow: hidden; /* Clearfix cho float */
+}
+
+/* Yêu cầu đống đề bài cho <aside> */
+aside.sidebar-info {
+    float: right;            /* Float sang bên phải */
+    width: 25%;              /* Chiếm chính xác 25% chiều rộng */
+    margin: 10px 0 10px 20px;/* Custom Margin */
+    padding: 15px;           /* Custom Padding */
+    border: 2px solid #333;  /* Custom Border */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Định dạng các section công việc */
+section.job-post {
+    margin-bottom: 30px;
+}
 /* Apply Page CSS*/
 
 .apply-form-grid {
