@@ -166,6 +166,81 @@ section.job-post {
     margin-bottom: 30px;
 }
 
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main {
+    width: 100%;
+    overflow: hidden; /* Clearfix cho float */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Yêu cầu cho thẻ <aside> */
+aside.sidebar-info {
+    float: right;            
+    width: 25%;              
+    margin: 0 0 20px 20px;
+    padding: 20px;           
+    border: 2px solid #0056b3;  
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Định dạng Card cho từng Job Listing */
+section.job-post {
+    float: left;
+    width: 70%; /* Chiếm phần còn lại bên trái */
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Thiết kế nút bấm Apply */
+.apply-btn {
+    display: inline-block;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #003d82;
+}
+
+/* Responsive cơ bản cho màn hình nhỏ */
+@media (max-width: 768px) {
+    aside.sidebar-info, section.job-post {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
 /* Apply Page CSS*/
 .apply-form-grid {
     display: grid;
