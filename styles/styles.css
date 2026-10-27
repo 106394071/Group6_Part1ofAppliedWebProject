@@ -302,8 +302,7 @@ blockquote {
 }
 
 /* Group photo */
-.team-photo {
-    border: 3px solid #2563EB;
+.team-photo {   
     border-radius: 12px;
     padding: 12px;
     margin: 20px 0;
