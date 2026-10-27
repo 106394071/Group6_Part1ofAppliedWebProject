@@ -265,47 +265,179 @@ section.job-post {
     font: inherit;
 }
 
-.apply-fieldset {
-    margin: 20px 0;
-    padding: 16px;
-    border: 1px solid #a8a8a8;
+.apply-main {
+    width: auto;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+.apply-panel {
+    background-color: #ffffff;
+    padding: 24px;
+    border: 1px solid #d5dbe3;
     border-radius: 8px;
 }
 
-.apply-option-list {
+.apply-intro {
+    margin-bottom: 1rem;
+}
+
+.required-note {
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.required-marker {
+    color: #a61b1b;
+    font-weight: bold;
+}
+
+.apply-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 22px;
+}
+
+.apply-form .form-field {
+    min-width: 0;
+}
+
+.apply-form .form-field--full,
+.apply-form .form-fieldset,
+.apply-form .form-actions {
+    grid-column: 1 / -1;
+}
+
+.apply-form label,
+.apply-form legend {
+    font-weight: bold;
+}
+
+.apply-form .form-field > label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.apply-form input[type="text"],
+.apply-form input[type="email"],
+.apply-form input[type="tel"],
+.apply-form select,
+.apply-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #8d99a8;
+    border-radius: 4px;
+    padding: 10px;
+    font: inherit;
+    background-color: #ffffff;
+    color: #333030;
+}
+
+.apply-form textarea {
+    resize: vertical;
+}
+
+.apply-form .form-fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 14px 16px 16px;
+    border: 1px solid #b7c2ce;
+    border-radius: 6px;
+}
+
+.apply-form legend {
+    padding: 0 5px;
+}
+
+.apply-form .radio-options,
+.apply-form .skill-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px 24px;
+    gap: 10px 20px;
 }
 
-.apply-option-list label {
+.apply-form .option-label {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
+    font-weight: normal;
 }
 
-.apply-option-list input {
+/* Override the general input padding so radio buttons and checkboxes stay compact. */
+.apply-form input[type="radio"],
+.apply-form input[type="checkbox"] {
     width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
 }
 
-.apply-field input:focus-visible,
-.apply-field select:focus-visible,
-.apply-field textarea:focus-visible,
-.apply-option-list input:focus-visible,
-.apply-actions button:focus-visible {
-    outline: 2px solid #2457a7;
+.apply-form input:focus-visible,
+.apply-form select:focus-visible,
+.apply-form textarea:focus-visible,
+.apply-form button:focus-visible {
+    outline: 3px solid #245db5;
     outline-offset: 2px;
 }
 
-.apply-actions {
+.apply-form .form-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 20px;
 }
 
-.apply-actions button {
+.apply-form button {
+    border: 1px solid #263b5e;
+    border-radius: 4px;
     padding: 10px 18px;
+    background-color: #263b5e;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+}
+
+.apply-form button:hover {
+    background-color: #1c2c47;
+}
+
+.apply-form .reset-button {
+    background-color: #ffffff;
+    color: #263b5e;
+}
+
+.apply-form .reset-button:hover {
+    background-color: #edf1f6;
+}
+
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+    border-color: #245db5;
+}
+
+@media (max-width: 600px) {
+    .apply-main {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .apply-panel {
+        padding: 16px;
+    }
+
+    .apply-form {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .apply-form .form-field--full,
+    .apply-form .form-fieldset,
+    .apply-form .form-actions {
+        grid-column: auto;
+    }
 }
 
 
