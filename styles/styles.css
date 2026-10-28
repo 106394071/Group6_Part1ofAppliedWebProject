@@ -310,31 +310,13 @@ section.job-post {
 }
 
 /* Apply Page CSS*/
-.apply-form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px 24px;
-}
-
-.apply-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
-}
-
-.apply-field input,
-.apply-field select,
-.apply-field textarea {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    font: inherit;
-}
+/* Apply Page CSS
+   Add this block to the existing styles/styles.css file in the Apply Page section.
+   It intentionally styles only Apply Page classes; do not replace the shared stylesheet.
+*/
 
 .apply-main {
-    width: auto;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px 50px;
@@ -342,13 +324,18 @@ section.job-post {
 }
 
 .apply-panel {
-    background-color: #ffffff;
+    background-color: #f5f3de;
     padding: 24px;
-    border: 1px solid #d5dbe3;
+    border: 1px solid #e1dec7;
     border-radius: 8px;
 }
 
+.apply-panel h2 {
+    color: #477b64;
+}
+
 .apply-intro {
+    max-width: 70ch;
     margin-bottom: 1rem;
 }
 
@@ -383,7 +370,7 @@ section.job-post {
     font-weight: bold;
 }
 
-.apply-form .form-field>label {
+.apply-form .form-field > label {
     display: block;
     margin-bottom: 6px;
 }
@@ -396,8 +383,8 @@ section.job-post {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #8d99a8;
-    border-radius: 4px;
+    border: 1px solid #a6a28a;
+    border-radius: 5px;
     padding: 10px;
     font: inherit;
     background-color: #ffffff;
@@ -412,8 +399,9 @@ section.job-post {
     min-width: 0;
     margin: 0;
     padding: 14px 16px 16px;
-    border: 1px solid #b7c2ce;
+    border: 1px solid #b7b59d;
     border-radius: 6px;
+    background-color: #fcfbf5;
 }
 
 .apply-form legend {
@@ -434,7 +422,7 @@ section.job-post {
     font-weight: normal;
 }
 
-/* Override the general input padding so radio buttons and checkboxes stay compact. */
+/* Keep radio buttons and checkboxes compact, unlike text-entry fields. */
 .apply-form input[type="radio"],
 .apply-form input[type="checkbox"] {
     width: auto;
@@ -447,7 +435,7 @@ section.job-post {
 .apply-form select:focus-visible,
 .apply-form textarea:focus-visible,
 .apply-form button:focus-visible {
-    outline: 3px solid #245db5;
+    outline: 3px solid #477b64;
     outline-offset: 2px;
 }
 
@@ -458,32 +446,26 @@ section.job-post {
 }
 
 .apply-form button {
-    border: 1px solid #263b5e;
-    border-radius: 4px;
+    border: 1px solid #263d35;
+    border-radius: 5px;
     padding: 10px 18px;
-    background-color: #263b5e;
-    color: #ffffff;
+    background-color: #263d35;
+    color: #f5f3de;
     font: inherit;
     font-weight: bold;
 }
 
 .apply-form button:hover {
-    background-color: #1c2c47;
+    background-color: #477b64;
 }
 
 .apply-form .reset-button {
-    background-color: #ffffff;
-    color: #263b5e;
+    background-color: #f5f3de;
+    color: #263d35;
 }
 
 .apply-form .reset-button:hover {
-    background-color: #edf1f6;
-}
-
-.apply-form input:focus,
-.apply-form select:focus,
-.apply-form textarea:focus {
-    border-color: #245db5;
+    background-color: #f7f1b2;
 }
 
 @media (max-width: 600px) {
@@ -497,16 +479,17 @@ section.job-post {
     }
 
     .apply-form {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 14px;
     }
 
     .apply-form .form-field--full,
     .apply-form .form-fieldset,
     .apply-form .form-actions {
-        grid-column: auto;
+        grid-column: 1 / -1;
     }
 }
+
 
 
 /* About Page CSS*/
