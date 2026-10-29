@@ -116,7 +116,7 @@ section {
     margin-bottom: 15px;
 }
 
-.hero form input{
+.hero form input {
     width: 300px;
 }
 
@@ -154,7 +154,8 @@ button {
     background-color: #f5f3de;
     clear: both;
 }
-.company-info h2{
+
+.company-info h2 {
     margin: 10px;
 }
 
@@ -175,7 +176,7 @@ footer {
     clear: both;
 }
 
-footer div{
+footer div {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -189,14 +190,15 @@ footer div img {
     height: 30px;
 }
 
-footer div a{
+footer div a {
     color: #f5f3de;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
 }
 
-footer div a:hover, footer div a:focus{
+footer div a:hover,
+footer div a:focus {
     text-decoration: underline;
 }
 
@@ -206,10 +208,11 @@ footer div a:hover, footer div a:focus{
     font-size: 14px;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) and (max-width: 1000px) {
 
     header,
-    section {
+    section,
+    footer {
         padding: 15px;
         margin: auto;
         width: 80%;
@@ -221,7 +224,6 @@ footer div a:hover, footer div a:focus{
 
     main {
         width: 95%;
-
         .apply-form-grid {
             grid-template-columns: minmax(0, 1fr);
         }
@@ -249,6 +251,26 @@ footer div a:hover, footer div a:focus{
         float: none;
         width: 100%;
         margin: 0 0 20px 0;
+    }
+
+    .apply-main {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .apply-panel {
+        padding: 16px;
+    }
+
+    .apply-form {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .apply-form .form-field--full,
+    .apply-form .form-fieldset,
+    .apply-form .form-actions {
+        grid-column: auto;
     }
 }
 
@@ -485,29 +507,6 @@ section.job-post {
 .apply-form textarea:focus {
     border-color: #245db5;
 }
-
-@media (max-width: 600px) {
-    .apply-main {
-        width: 100%;
-        padding: 16px;
-    }
-
-    .apply-panel {
-        padding: 16px;
-    }
-
-    .apply-form {
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-
-    .apply-form .form-field--full,
-    .apply-form .form-fieldset,
-    .apply-form .form-actions {
-        grid-column: auto;
-    }
-}
-
 
 /* About Page CSS*/
 .card {
