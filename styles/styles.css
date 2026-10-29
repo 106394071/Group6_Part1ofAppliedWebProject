@@ -275,16 +275,11 @@ footer div a:focus {
 }
 
 /* Jobs Page CSS*/
-aside.sidebar-info {
-    float: right;
-    width: 25%;
-    margin: 10px 0 10px 20px;
-    padding: 15px;
-    border: 2px solid #333;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
 
+
+body {
+    background-color: #f7f4e9; /* Hoặc mã màu vàng nhạt hiện tại của bạn */
+}
 section.job-post {
     margin-bottom: 30px;
 }
@@ -292,10 +287,10 @@ section.job-post {
 /* Yêu cầu cho thẻ <aside> */
 aside.sidebar-info {
     float: right;
-    width: 25%;
+    width: 20%;
     margin: 0 0 20px 20px;
     padding: 20px;
-    border: 2px solid #0056b3;
+    border: 2px solid #477b64;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -317,7 +312,7 @@ section.job-post {
 /* Thiết kế nút bấm Apply */
 .apply-btn {
     display: inline-block;
-    background-color: #0056b3;
+    background-color: #477b64;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -328,7 +323,7 @@ section.job-post {
 }
 
 .apply-btn:hover {
-    background-color: #003d82;
+    background-color: #263d35;
 }
 
 /* Apply Page CSS*/
