@@ -515,7 +515,7 @@ section.job-post {
 
 /* Member definition list */
 dt {
-    color: #1E40AF;
+    color: #477D68;
     font-size: 19px;
     font-weight: bold;
     margin-top: 20px;
@@ -529,8 +529,8 @@ dd {
 /* Styled student IDs */
 .student-id {
     display: inline-block;
-    background-color: #DBEAFE;
-    color: #1D4ED8;
+    background-color: #E5EFE8;
+    color: #477D68;
     padding: 5px 10px;
     border-radius: 6px;
     font-size: 14px;
@@ -539,8 +539,8 @@ dd {
 
 /* Quotes */
 blockquote {
-    background-color: #EFF6FF;
-    border-left: 4px solid #2563EB;
+    background-color: #E5EFE8;
+    border-left: 4px solid #477D68;
     padding: 12px 16px;
     margin: 15px 0;
     border-radius: 5px;
@@ -558,8 +558,8 @@ blockquote {
 }
 
 .student-id:hover {
-    background-color: #1D4ED8;
-    color: #FFFFFF;
+    background-color: #477D68;
+    color: #E5EFE8;
 }
 
 /* Group photo */
