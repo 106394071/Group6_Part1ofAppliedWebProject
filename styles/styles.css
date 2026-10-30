@@ -475,10 +475,10 @@ section.job-post {
 }
 
 .apply-form button {
-    border: 1px solid #263b5e;
+    border: 1px solid #477b64;
     border-radius: 4px;
     padding: 10px 18px;
-    background-color: #263b5e;
+    background-color: #477b64;
     color: #ffffff;
     font: inherit;
     font-weight: bold;
@@ -490,7 +490,7 @@ section.job-post {
 
 .apply-form .reset-button {
     background-color: #ffffff;
-    color: #263b5e;
+    color: #477b64;
 }
 
 .apply-form .reset-button:hover {
